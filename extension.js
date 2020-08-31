@@ -1,6 +1,6 @@
 const hx = require("hbuilderx");
 const os = require("os");
-const fs = require('fs');
+const fs = require('fs-extra');  //需v8.1.0版本才行
 const path = require("path");
 const utils = require("./utils/utils.js");
 const wtu = require("miniprogram-to-uniapp");
@@ -47,8 +47,7 @@ function checkMiniApp(folder, outputChannel) {
 	let json_app = path.join(folder, "app.json");
 	if (fs.existsSync(json_app)) {
 		try {
-			var appJson = fs.readFileSync(json_app, 'utf-8');
-			appJson = JSON.parse(appJson);
+			var appJson = fs.readJsonSync(json_app);
 			var pages = appJson["pages"];
 			if (pages && Array.isArray(pages)) {
 				isMiniApp = true;

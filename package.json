@@ -53,6 +53,7 @@
 		"plugin-manager"
 	],
 	"dependencies": {
+		"fs-extra": "8.1.0",
 		"miniprogram-to-uniapp": "^1.0.70"
 	},
 	"license": "MIT"
