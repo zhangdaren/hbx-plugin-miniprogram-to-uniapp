@@ -1,0 +1,4 @@
+# Mac DS_Store Files
+*.zip
+.DS_Store
+node_modules

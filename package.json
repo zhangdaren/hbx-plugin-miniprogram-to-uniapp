@@ -1,0 +1,59 @@
+{
+	"name": "miniprogram-to-uniapp",
+	"description": "支持转换各种小程序为uniapp项目",
+	"displayName": "miniprogram-to-uniapp",
+	"version": "1.0.1",
+	"publisher": "zhangdaren",
+	"engines": {
+		"HBuilderX": "^2.7.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./extension",
+	"activationEvents": [
+		"onCommand:extension.mpToUniapp"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.mpToUniapp",
+				"title": "miniprogram to uniapp"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.mpToUniapp",
+					"group": "z_commands",
+					"when": "explorerResourceIsWorkspaceFolder"
+				},
+				{
+					"group": "z_commands"
+				}
+			]
+		},
+		"configuration": {
+			"title": "miniprogram to uniapp",
+			"properties": {
+				"mpToUniapp.renameWxToUni": {
+					"type": "boolean",
+					"default": true,
+					"description": "替换小程序全局关键字wx/qq/tt/my/swan为uni"
+				},
+				"mpToUniapp.mergeWxssIntoVue": {
+					"type": "boolean",
+					"default": true,
+					"description": "合并wxss文件到vue文件里"
+				}
+			}
+		}
+	},
+	"extensionDependencies": [
+		"plugin-manager"
+	],
+	"dependencies": {
+		"miniprogram-to-uniapp": "^1.0.70"
+	},
+	"license": "MIT"
+}
