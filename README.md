@@ -4,6 +4,8 @@
 
 ## 使用方法
 
+打开插件链接：[HBuilder X 插件 miniprogram-to-uniapp](https://ext.dcloud.net.cn/plugin?id=2656)，点击右侧绿色按钮“使用HBuilderX导入插件”。
+
 在HBuilder X左侧项目管理器里，在小程序项目上右键，点击弹出菜单里面的 “miniprogram to uniapp”，然后等待插件运行结束即可。
 
 ![点击菜单](https://zhangdaren.gitee.io/articles/img/hbx_wtu_01.png)
