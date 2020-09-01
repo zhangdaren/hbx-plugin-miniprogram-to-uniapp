@@ -24,6 +24,7 @@ function activate(context) {
 			outputChannel.appendLine("项目名：" + name + "    项目类型：" + nature);
 			transform(params, outputChannel);
 		} else {
+			//二次判断
 			var isMiniApp = checkMiniApp(fsPath, outputChannel);
 			if (isMiniApp) {
 				outputChannel.appendLine("项目名：" + name + "    项目类型：" + nature + " (二次检测：MiniApp)");
