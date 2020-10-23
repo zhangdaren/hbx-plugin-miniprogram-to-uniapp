@@ -1,6 +1,6 @@
 const hx = require("hbuilderx");
 const os = require("os");
-const fs = require('fs-extra');  //需v8.1.0版本才行
+const fs = require('fs-extra'); //需v8.1.0版本才行
 const path = require("path");
 const utils = require("./utils/utils.js");
 const wtu = require("miniprogram-to-uniapp");
@@ -30,7 +30,7 @@ function activate(context) {
 				outputChannel.appendLine("项目名：" + name + "    项目类型：" + nature + " (二次检测：MiniApp)");
 				transform(params, outputChannel);
 			} else {
-				outputChannel.appendLine("检测到非小程序项目，请选择其他项目再试试~");
+				outputChannel.appendLine("检测到非小程序项目(识别为：" + nature + ")，请选择其他项目再试试~");
 			}
 		}
 	});

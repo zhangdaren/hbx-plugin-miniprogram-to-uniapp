@@ -2,6 +2,8 @@
 
 转换微信、QQ、头条/抖音、支付宝/钉钉和百度等小程序转换到 uni-app 项目
 
+遇到问题，如需紧急联系，请添加QQ群进行反馈，长期在线！社区不太经常上。
+
 ## 使用方法
 
 打开插件链接：[HBuilder X 插件 miniprogram-to-uniapp](https://ext.dcloud.net.cn/plugin?id=2656)，点击右侧绿色按钮“使用HBuilderX导入插件”。
@@ -22,11 +24,17 @@
 
 使用时遇到问题，请仔细阅读： [miniprogram to uniapp 工具答疑](https://github.com/zhangdaren/articles/blob/master/miniprogram-to-uniapp%E5%B7%A5%E5%85%B7%E7%AD%94%E7%96%91.md)
 
-对于使用有疑问或建议，欢迎加入 QQ 群：780359397 进行讨论。
-
-<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=6cccd111e447ed70ee0c17672a452bf71e7e62cfa6b427bbd746df2d32297b64"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="小程序转uni-app讨论群" title="小程序转uni-app讨论群"></a>
+对于使用有疑问或建议，欢迎加入 QQ 群进行指导和反馈。
+   
+交流 QQ 群：
+1 群：780359397 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=6cccd111e447ed70ee0c17672a452bf71e7e62cfa6b427bbd746df2d32297b64"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="小程序转uni-app讨论群" title="小程序转uni-app讨论群"></a> (已满)
+2 群：361784059 <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=vpt4K1r6Witx29ZsKcb_tqvinhcZzVhK&jump_from=webapi"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="小程序转uniapp研究二群" title="小程序转uniapp研究二群"></a>
 
 ## 已完成
+
+<!-- |微信小程序|支付宝小程序|百度小程序|字节跳动小程序|QQ小程序|360小程序
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|√|√|√|√|√|x -->
 
 -   支持微信、QQ、头条/抖音、支付宝/钉钉和百度等小程序转换到 uni-app 项目
 -   支持解析 TypeScript 小程序项目
@@ -54,7 +62,7 @@
 
 ## 更新记录
 
-### v1.0.4(20200905)
+### v1.0.6(20201023)
 -   更新miniprogram-to-uniapp版本，优化异常情况的处理
 -   
 ### v1.0.1(20200831)
