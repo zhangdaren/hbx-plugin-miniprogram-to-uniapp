@@ -4,6 +4,7 @@ const fs = require('fs-extra'); //需v8.1.0版本才行
 const path = require("path");
 const utils = require("./utils/utils.js");
 const wtu = require("miniprogram-to-uniapp");
+const pkg = require('./package.json');
 
 //该方法将在插件激活的时候调用
 function activate(context) {
