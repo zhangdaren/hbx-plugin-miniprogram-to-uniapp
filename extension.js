@@ -71,8 +71,10 @@ function transform(params, outputChannel) {
 	var name = workspaceFolder.name; //项目名
 	//
 	let config = hx.workspace.getConfiguration();
+	let vueAppCliMode = config.get('mpToUniapp.vueAppCliMode');
 	let renameWxToUni = config.get('mpToUniapp.renameWxToUni');
 	let mergeWxssIntoVue = config.get('mpToUniapp.mergeWxssIntoVue');
+	let repair = config.get('mpToUniapp.repair');
 	// "mpToUniapp.checkVant": {
 	// 	"type": "boolean",
 	// 	"default": true,
@@ -81,20 +83,25 @@ function transform(params, outputChannel) {
 	// let isVantProject = config.get('mpToUniapp.checkVant');
 	// console.log(renameWxToUni, mergeWxssIntoVue, isVantProject);
 
+	let options = {
+		isVueAppCliMode: vueAppCliMode,
+		isRenameWxToUni: renameWxToUni,
+		isMergeWxssToVue: mergeWxssIntoVue,
+		isRepair: repair,
+		isHBuildXPlugin:true, //恒为true!
+	}
+
+
 	try {
 		//预处理
 		wtu.preHandle(fsPath, outputChannel);
 
 		//开始转换
-		wtu.transform(fsPath, '', false, false, false, renameWxToUni, mergeWxssIntoVue, function(ouputFolder) {
+		wtu.transform(fsPath, options, function(ouputFolder) {
 			outputChannel.appendLine(
-				"--------------------------------------------------------------------------------------------------");
-			outputChannel.appendLine("转换后的项目" + name + "_uni" + "已经自动添加到HBuilder X左侧项目管理器里\n");
-			outputChannel.appendLine("运行转换后的项目时，请先详细阅读答疑文档！\n");
-			outputChannel.appendLine(
-				"答疑文档：https://github.com/zhangdaren/articles/blob/master/miniprogram-to-uniapp%E5%B7%A5%E5%85%B7%E7%AD%94%E7%96%91.md\n"
+				"--------------------------------------------------------------------------------------------------"
 			);
-			outputChannel.appendLine("git地址：https://github.com/zhangdaren/miniprogram-to-uniapp, 欢迎各位大佬star和issue!");
+			outputChannel.appendLine("转换后的项目" + name + "_uni" + "已经自动添加到HBuilder X左侧项目管理器里\n");
 
 			//添加这个项目到项目管理器
 			utils.addProjectToHbxProjects(ouputFolder);
