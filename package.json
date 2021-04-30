@@ -2,7 +2,7 @@
 	"name": "miniprogram-to-uniapp",
 	"description": "支持转换各种小程序为uniapp项目",
 	"displayName": "miniprogram-to-uniapp",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"publisher": "zhangdaren",
 	"engines": {
 		"HBuilderX": "^2.7.0"
@@ -64,7 +64,7 @@
 	],
 	"dependencies": {
 		"fs-extra": "8.1.0",
-		"miniprogram-to-uniapp": "^1.1.1"
+		"miniprogram-to-uniapp": "^1.1.2"
 	},
 	"license": "MIT"
 }
