@@ -69,6 +69,17 @@
 
 ## 更新记录
 
+### v1.1.4(20210622)
+
+-  [新增] var 一行声明拆成多行声明
+-  [修复] 生成css附带source map的bug
+-  [修复] H5平台添加兼容导航栏位置的css错乱的bug
+-  [修复] `onLoad: function(options = {}){}` 解析 报错的bug
+-  [修复] 属性为空时未删除的bug(如`<view start="{{}}"></view>`、`<view class="page_db_1" bindtap="">`等)
+-  [修复] form-type被莫名加上了冒号(:)的bug(`<view :form-type="submit"></view>`)
+-  [修复] 支持微信小程序”简易双向绑定“转换(`<input model:value="{{myValue}}" />`-->`<input v-model="myValue" />`)
+-  ...等等
+
 ### v1.0.9(20210430)
 -   【重要】 [针对压缩代码]增加 -f 参数，默认为false，用于尽可能修复被混淆过的js代码，提升可读性！
 -   【重要】 [针对压缩代码]三元表达式转换为if表达式(需增加-f参数)
