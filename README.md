@@ -69,6 +69,13 @@
 
 ## 更新记录
 
+### v1.1.5(20210703)
+
+- [优化] 过滤ts文件
+- [修复] app.js里data原样移入globalData
+- [修复] 将整个表达式在data里创建变量的bug(`<view wx:if='(plugins_coupon_data || null) != null'></view>`)
+...等等
+
 ### v1.1.4(20210622)
 
 -  [新增] var 一行声明拆成多行声明
