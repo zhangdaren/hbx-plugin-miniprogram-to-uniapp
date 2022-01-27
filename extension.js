@@ -71,45 +71,47 @@ function transform(params, outputChannel) {
 	var name = workspaceFolder.name; //项目名
 	//
 	let config = hx.workspace.getConfiguration();
-	let vueAppCliMode = config.get('mpToUniapp.vueAppCliMode');
-	let renameWxToUni = config.get('mpToUniapp.renameWxToUni');
+	// let vueAppCliMode = config.get('mpToUniapp.vueAppCliMode');
+	// let renameWxToUni = config.get('mpToUniapp.renameWxToUni');
 	let mergeWxssIntoVue = config.get('mpToUniapp.mergeWxssIntoVue');
-	let repair = config.get('mpToUniapp.repair');
+	// let repair = config.get('mpToUniapp.repair');
 	// "mpToUniapp.checkVant": {
 	// 	"type": "boolean",
 	// 	"default": true,
-	// 	"description": "自动识别vant并进行相应转换"
+	// 	"description": "自动识别vant并进行相应转换"s
 	// }
 	// let isVantProject = config.get('mpToUniapp.checkVant');
 	// console.log(renameWxToUni, mergeWxssIntoVue, isVantProject);
 
 	let options = {
-		isVueAppCliMode: vueAppCliMode,
-		isRenameWxToUni: renameWxToUni,
+		// isVueAppCliMode: vueAppCliMode,
+		// isRenameWxToUni: renameWxToUni,
 		isMergeWxssToVue: mergeWxssIntoVue,
-		isRepair: repair,
-		isHBuildXPlugin:true, //恒为true!
+		// isRepair: repair,
+		isHBuildXPlugin: true, //恒为true!
+		outputChannel: outputChannel
 	}
 
-
 	try {
-		//预处理
-		wtu.preHandle(fsPath, outputChannel);
-
 		//开始转换
 		wtu.transform(fsPath, options, function(ouputFolder) {
 			outputChannel.appendLine(
 				"--------------------------------------------------------------------------------------------------"
 			);
-			outputChannel.appendLine("转换后的项目" + name + "_uni" + "已经自动添加到HBuilder X左侧项目管理器里\n");
+			var log = "转换后的项目" + name + "_uni" + "已经自动添加到HBuilder X左侧项目管理器里(如果没添加请手动在同级目录找到并添加)"
+			outputChannel.appendLine(log);
 
 			//添加这个项目到项目管理器
 			utils.addProjectToHbxProjects(ouputFolder);
+
+			hx.window.showInformationMessage(log);
 		});
 	} catch (e) {
 		//TODO handle the exception
-		console.log("转换报错" + JSON.stringify(e))
+		console.log("转换报错: " + JSON.stringify(e))
 		outputChannel.appendLine("转换报错: " + JSON.stringify(e));
+		
+		hx.window.showInformationMessage("转换报错: " + JSON.stringify(e));
 	}
 }
 

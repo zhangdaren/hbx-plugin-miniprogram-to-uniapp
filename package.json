@@ -1,8 +1,8 @@
 {
 	"name": "miniprogram-to-uniapp",
-	"description": "支持转换各种小程序为uniapp项目",
-	"displayName": "miniprogram-to-uniapp",
-	"version": "1.1.5",
+	"description": "转换各种小程序为uniapp项目",
+	"displayName": "miniprogram-to-uniapp v2",
+	"version": "2.0.12",
 	"publisher": "zhangdaren",
 	"engines": {
 		"HBuilderX": "^2.7.0"
@@ -18,7 +18,7 @@
 		"commands": [
 			{
 				"command": "extension.mpToUniapp",
-				"title": "miniprogram to uniapp"
+				"title": "miniprogram to uniapp v2"
 			}
 		],
 		"menus": {
@@ -34,27 +34,12 @@
 			]
 		},
 		"configuration": {
-			"title": "miniprogram to uniapp",
+			"title": "miniprogram to uniapp v2",
 			"properties": {
-				"mpToUniapp.vueAppCliMode": {
-					"type": "boolean",
-					"default": false,
-					"description": "使用 Vue-cli 模式进行转换"
-				},
-				"mpToUniapp.renameWxToUni": {
-					"type": "boolean",
-					"default": true,
-					"description": "替换小程序全局关键字wx/qq/tt/my/swan为uni"
-				},
 				"mpToUniapp.mergeWxssIntoVue": {
 					"type": "boolean",
 					"default": true,
 					"description": "合并wxss文件到vue文件里"
-				},
-				"mpToUniapp.repair": {
-					"type": "boolean",
-					"default": false,
-					"description": "js代码反混淆及优化"
 				}
 			}
 		}
@@ -64,7 +49,7 @@
 	],
 	"dependencies": {
 		"fs-extra": "8.1.0",
-		"miniprogram-to-uniapp": "^1.1.5"
+		"miniprogram-to-uniapp": "^2.0.11"
 	},
 	"license": "MIT"
 }
